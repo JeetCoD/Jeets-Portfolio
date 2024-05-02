@@ -45,7 +45,7 @@ function ExperienceCard() {
         <div
           data-aos="fade"
           data-aos-once="true"
-          className="flex flex-col lg:flex-row border-t border-transparent hover:border-t hover:border-sky-800/15 hover:bg-sky-800/10   rounded-md transition-all ease-linear   gap-4 hover:shadow-sm hover:shadow-sky-600/10 p-4"
+          className="flex flex-col lg:flex-row border-t border-transparent hover:border-t hover:border-sky-800/15 hover:bg-sky-800/10   rounded-md transition-all ease-linear gap-4 hover:shadow-sm hover:shadow-sky-600/10 p-4 cursor-pointer"
           key={experience.company}
         >
           <div
@@ -57,9 +57,12 @@ function ExperienceCard() {
           <div className="md:leading-none">
             <div className="flex flex-col gap-4">
               <p className="text-gray-100 font-medium text-md hover:text-cyan-500 transition-all ease-in hover:underline-offset-4 hover:underline cursor-pointer">
-                <a href={experience.link} target=" _blank"> {experience.company} </a>
-                <span> &bull; </span>
-                <span className="">{experience.positionedAt}</span>
+                <a href={experience.link} target=" _blank">
+                  {" "}
+                  {experience.company}
+                  <span> &bull; </span>
+                  <span className="">{experience.positionedAt}</span>
+                </a>
               </p>
               <p
                 className={`font-medium text-gray-400 flex shrink-0  min-w-52 gap-1  ${baseClass} leading-relaxed`}

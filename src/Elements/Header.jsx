@@ -1,4 +1,11 @@
-import { FiGithub, FiLinkedin, FiMail, FiTwitter, FiX } from "react-icons/fi";
+import {
+  FiDribbble,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiTwitter,
+  FiX,
+} from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -11,34 +18,36 @@ function Header() {
       </div>
       <div className="flex flex-row gap-2">
         <Link
-          to="https://twitter.com/g_jeet2612"
+          to="https://github.com/JeetCoD"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border  border-cyan-600/50 cursor-pointer text-cyan-600/50 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiTwitter className="text-lg " />
+          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border  border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
+            <FiGithub className="text-lg" />
           </div>
         </Link>
+
         <Link
           to="https://www.linkedin.com/in/jeet-gajjar-885bb4266/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border  border-cyan-600/50 cursor-pointer text-cyan-600/50 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
+          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border  border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
             <FiLinkedin className="text-lg" />
           </div>
         </Link>
         <Link
-          to="https://github.com/JeetCoD"
+          to="https://dribbble.com/jeet_design2612"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border  border-cyan-600/50 cursor-pointer text-cyan-600/50 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiGithub className="text-lg" />
+          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border  border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
+            <FiDribbble className="text-lg " />
           </div>
         </Link>
+
         <a href="mailto:jeet.gajjar2612@gmail.com">
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border  border-cyan-600/50 cursor-pointer text-cyan-600/50 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
+          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border  border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
             <FiMail className="  text-lg" />
           </div>
         </a>

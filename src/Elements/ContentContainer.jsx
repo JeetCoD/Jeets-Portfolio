@@ -4,7 +4,7 @@ import { useEffect } from "react";
 function ContentContainer({ children, type, size, name }) {
   useEffect(() => {
     AOS.init({ duration: 2000 });
-  });
+  }, []);
 
   const style = {
     full: "mx-0 px-12",
@@ -14,14 +14,17 @@ function ContentContainer({ children, type, size, name }) {
   const height = {
     full: "h-[100vh]",
   };
+
   return (
     <section
       id={name}
-      className={`bg-gray-950  ${height[size]}  px-12  mt-32 md:px-32 sm:px-18`}
+      className={`bg-gray-950 ${height[size]} px-8 mt-32 md:px-32 sm:px-18`}
+      data-aos="fade"
+      data-aos-once="true"
     >
-      <div className="" data-aos="fade" data-aos-once="true">
-        {children}
-      </div>
+      {children}
+
+     
     </section>
   );
 }

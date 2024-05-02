@@ -15,7 +15,7 @@ function Button({ children, type, icon, onClick, hasIcon = false }) {
         className={`${base} ${style[type]} transition-all ease-in`}
       >
         {hasIcon && <span>{icon}</span>}
-        <p>{children}</p>
+       {children}
       </button>
     </div>
   );

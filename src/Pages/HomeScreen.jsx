@@ -143,15 +143,15 @@ export const HomeScreen = () => {
       </ContentContainer>
       <ContentContainer name="projects">
         <SectionHeader id={4}>Let&apos;s Connect</SectionHeader>
-        <p className="mt-12 mb-36 gap-4 text-gray-400 leading-relaxed sm:leading-relaxed text-md">
+        <p className="mt-12  gap-4 text-gray-400 leading-relaxed sm:leading-relaxed text-md">
           Thank you for exploring my portfolio! If you&apos;re interested in
           collaborating, have any questions, or just want to say hello, feel
           free to reach out. I&apos;m always open to new opportunities and
           conversations.
-          <a href="mailto:jeetgajjar740@gmail.com" className="flex mt-4">
-            <Button type="secondary">Send a Message</Button>
-          </a>
         </p>
+        <a href="mailto:jeetgajjar740@gmail.com" className="flex mt-4 mb-36">
+          <Button type="secondary">Send a Message</Button>
+        </a>
       </ContentContainer>
       <footer className="flex flex-col justify-center items-center py-8  border-t border-gray-600 bg-gray-950">
         <p className="text-center text-xs leading-5 w-[70%] sm:text-sm text-gray-600 pb-2">
