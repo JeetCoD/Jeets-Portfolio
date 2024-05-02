@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-feature-settings: "ss03", "cv02", "cv11";
+}
+
+html {
+  background-color: #030712;
+}
+
+@layer utilities {
+  /* Border for our bottom */
+  .card-wrapper {
+    @apply relative bg-gradient-to-tr from-slate-900 to-gray-900 overflow-hidden;
+  }
+
+ .card-wrapper::before {
+ background: conic-gradient(
+      rgb(224, 224, 224) 20deg,
+      rgba(111, 111, 111, 0.4) 20deg,
+      transparent 20deg
+    );
+   @apply absolute left-[-45%] top-[-100%] h-[300%] w-[200%] animate-border-spin content-[''] ;
+}
+
+
+  .card-content {
+   @apply  left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] bg-gradient-to-b from-slate-800 to-slate-900;
+  }
+
+
+}
