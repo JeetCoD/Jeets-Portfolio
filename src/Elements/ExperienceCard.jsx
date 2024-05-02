@@ -37,7 +37,7 @@ function ExperienceCard() {
     },
   ];
 
-  const baseClass = "text-sm  sm:text-md ";
+  const baseClass = "text-sm sm:text-md ";
 
   return (
     <div className="mt-12 lg:w-[80%] flex flex-col gap-4">
@@ -45,27 +45,28 @@ function ExperienceCard() {
         <div
           data-aos="fade"
           data-aos-once="true"
-          className="flex flex-col lg:flex-row border-t border-transparent hover:border-t hover:border-sky-800/15 hover:bg-sky-800/10   rounded-md transition-all ease-linear gap-4 hover:shadow-sm hover:shadow-sky-600/10 p-4 cursor-pointer"
+          className="flex flex-col lg:flex-row border-t border-transparent lg:hover:border-t lg:hover:border-sky-800/15 lg:hover:bg-sky-800/10 lg:hover:shadow-sm lg:hover:shadow-sky-600/10 rounded-md transition-all ease-linear gap-4 py-4 lg:p-4 cursor-pointer"
           key={experience.company}
         >
           <div
-            className={`font-medium text-gray-600 flex shrink-0  min-w-52 gap-1  ${baseClass}`}
+            className={`font-medium text-gray-600 flex shrink-0 min-w-52 gap-1 ${baseClass}`}
           >
             <span>{experience.join} &mdash; </span>
             <span>{experience.end}</span>
           </div>
           <div className="md:leading-none">
             <div className="flex flex-col gap-4">
-              <p className="text-gray-100 font-medium text-md hover:text-cyan-500 transition-all ease-in hover:underline-offset-4 hover:underline cursor-pointer">
-                <a href={experience.link} target=" _blank">
-                  {" "}
+              <p
+                className={`text-gray-100 font-medium text-md transition-all ease-in lg:hover:text-cyan-500 lg:hover:underline-offset-4 lg:hover:underline cursor-pointer`}
+              >
+                <a href={experience.link} target="_blank" rel="noreferrer">
                   {experience.company}
                   <span> &bull; </span>
                   <span className="">{experience.positionedAt}</span>
                 </a>
               </p>
               <p
-                className={`font-medium text-gray-400 flex shrink-0  min-w-52 gap-1  ${baseClass} leading-relaxed`}
+                className={`font-medium text-gray-400 flex shrink-0 min-w-52 gap-1 ${baseClass} leading-relaxed`}
               >
                 {experience.responsibility}
               </p>
