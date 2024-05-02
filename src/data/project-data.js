@@ -21,7 +21,7 @@ export const project = [
       "JavaScript",
       "Recharts",
     ],
-    // webLink: "https://profity-v1.netlify.app",
+
     githubLink: "https://github.com/JeetCoD/wild-oasis",
     subtitle:
       "A robust hotel management application equipped with comprehensive user records, analytics for hotel operations, and seamless booking and management functionalities. Experience the convenience of integrated light and dark modes for optimal user experience.",
@@ -70,8 +70,8 @@ export const project = [
     projectName: "Worldwise",
     madeAt: "Personal Project",
     builtWith: ["React", "React Router", "HTML & CSS", "Leaflet"],
-    webLink: "https://github.com/JeetCoD/worldwise",
-    githubLink: "https://world-wise-v1.netlify.app/",
+    githubLink: "https://github.com/JeetCoD/worldwise",
+    webLink: "https://world-wise-v1.netlify.app/",
   },
 
   {
@@ -91,8 +91,8 @@ export const project = [
     projectName: "Travel List",
     madeAt: "Personal Project",
     builtWith: ["React", "JavaScript"],
-    webLink: "https://github.com/JeetCoD/travel-list",
-    githubLink: "https://travelchecklist-jeet.netlify.app/",
+    githubLink: "https://github.com/JeetCoD/travel-list",
+    webLink: "https://travelchecklist-jeet.netlify.app/",
   },
 
   {
@@ -116,7 +116,7 @@ export const project = [
     projectName: "Omnifood",
     madeAt: "Personal Project",
     builtWith: ["HTML", "CSS", "Javascript"],
-    webLink: "https://github.com/JeetCoD/omnifood",
-    githubLink: "https://jeet-omnifood.netlify.app/",
+    githubLink: "https://github.com/JeetCoD/omnifood",
+    webLink: "https://jeet-omnifood.netlify.app/",
   },
 ];
