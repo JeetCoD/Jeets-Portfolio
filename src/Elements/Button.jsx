@@ -4,7 +4,7 @@ function Button({ children, type, icon, onClick, hasIcon = false }) {
 
   const style = {
     primary:
-      "bg-gradient-to-tr from-cyan-800 to-sky-800 hover:bg-gradient-to-tr hover:from-cyan-900 hover:to-sky-900 border-t border-cyan-700  hover:border-cyan-600 hover:shadow-md hover:shadow-gray-900/60 ",
+      "bg-gradient-to-tr from-cyan-800 to-sky-800 hover:bg-gradient-to-tr hover:from-cyan-800/50 hover:to-sky-800/50 border-t border-cyan-700  hover:border-cyan-600 hover:shadow-md hover:shadow-gray-900/60 ",
     secondary:
       "text-sm md:text-md bg-gradient-to-tr from-cyan-800 to-sky-800 hover:bg-gradient-to-tr hover:from-cyan-900 hover:to-sky-900 border-t border-cyan-700  hover:border-cyan-600 hover:shadow-md hover:shadow-gray-900/60 font-medium",
   };
