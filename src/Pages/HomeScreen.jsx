@@ -79,7 +79,7 @@ export const HomeScreen = () => {
           </div>
           <div className="flex  justify-center gap-3 pt-7 z-0">
             <a target=" _blank">
-              <Button type="disabled" hasIcon="true" icon={<FiDownload />} type="primary">
+              <Button type="disabled" cursor="not-allowed" hasIcon="true" icon={<FiDownload />} type="primary">
                 Resume
               </Button>
             </a>
