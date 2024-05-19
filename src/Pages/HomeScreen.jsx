@@ -78,7 +78,7 @@ export const HomeScreen = () => {
             </Canvas>
           </div>
           <div className="flex  justify-center gap-3 pt-7 z-0">
-            <a href={} target=" _blank">
+            <a target=" _blank">
               <Button type="disabled" hasIcon="true" icon={<FiDownload />} type="primary">
                 Resume
               </Button>
