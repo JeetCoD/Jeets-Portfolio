@@ -37,7 +37,7 @@ function Header() {
           </div>
         </Link>
         <Link
-          to="https://dribbble.com/jeet_design2612"
+          to="https://dribbble.com/design_jeet"
           target="_blank"
           rel="noopener noreferrer"
         >
