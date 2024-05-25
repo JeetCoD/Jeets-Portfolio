@@ -4,9 +4,9 @@ function Button({ children, type, icon, onClick, hasIcon = false }) {
 
   const style = {
     primary:
-      "bg-gradient-to-tr from-cyan-800 to-sky-800 hover:bg-gradient-to-tr hover:from-cyan-900 hover:to-sky-900 border-t border-cyan-700  hover:border-cyan-600 hover:shadow-md hover:shadow-gray-900/60 ",
+      "bg-gradient-to-tr from-cyan-800 to-sky-800 hover:bg-gradient-to-tr hover:from-cyan-900 hover:to-sky-900 border-t border-cyan-700  hover:border-cyan-600 hover:shadow-md hover:shadow-gray-900/60 transistion-all ease-in",
     secondary:
-      "text-sm md:text-md bg-gradient-to-tr from-cyan-800 to-sky-800 hover:bg-gradient-to-tr hover:from-cyan-900 hover:to-sky-900 border-t border-cyan-700  hover:border-cyan-600 hover:shadow-md hover:shadow-gray-900/60 font-medium",
+      "text-sm md:text-md bg-gradient-to-tr from-cyan-800 to-sky-800 hover:bg-gradient-to-tr hover:from-cyan-900 hover:to-sky-900 border-t border-cyan-700  hover:border-cyan-600 hover:shadow-md hover:shadow-gray-900/60 font-medium transistion-all ease-in",
   };
   return (
     <div className="flex justify-center items-center">
