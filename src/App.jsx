@@ -30,9 +30,10 @@ function App() {
           style: {
             fontSize: "14px",
             padding: "4px 8px",
-            maxWidth: "500px",
+           display: "flex", 
             backgroundColor: "#f1f5f9",
             color: "#020617",
+            textAlign: "center",
           },
         }}
       />
