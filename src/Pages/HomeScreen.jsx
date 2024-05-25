@@ -16,6 +16,8 @@ import ProjectShowcase from "../Elements/ProjectShowcase";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import Resume from "../data/Jeet-resume.pdf";
+import { toast } from "react-hot-toast";
+
 
 const COLORS_TOP = ["rgba(229, 229, 229, 0.4)"];
 
@@ -48,6 +50,11 @@ export const HomeScreen = () => {
     Aos.init({ duration: 2000 });
   }, []);
 
+  function handleToast(){
+    toast("Resume download is currently unavailable");
+    console.log("I'm working too")
+  }
+
   return (
     <>
       <div className="flex flex-col h-screen">
@@ -78,8 +85,13 @@ export const HomeScreen = () => {
             </Canvas>
           </div>
           <div className="flex  justify-center gap-3 pt-7 z-0">
-            <a href={Resume} target=" _blank">
-              <Button hasIcon="true" icon={<FiDownload />} type="primary">
+            <a  target=" _blank">
+              <Button
+                hasIcon="true"
+                icon={<FiDownload />}
+                type="primary"
+                onClick={() => handleToast()}
+              >
                 Resume
               </Button>
             </a>
@@ -167,6 +179,7 @@ export const HomeScreen = () => {
           by Jeet
         </p>
       </footer>
+ 
     </>
   );
 };
