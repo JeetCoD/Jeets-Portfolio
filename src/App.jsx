@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import Projects from "./Pages/Projects";
 import PageNotFound from "./Pages/PageNotFound";
 import { Toaster } from "react-hot-toast";
+import Blog from "./Pages/Blog";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

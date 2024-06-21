@@ -85,13 +85,8 @@ export const HomeScreen = () => {
             </Canvas>
           </div>
           <div className="flex  justify-center gap-3 pt-7 z-0">
-            <a  target=" _blank">
-              <Button
-                hasIcon="true"
-                icon={<FiDownload />}
-                type="primary"
-                onClick={() => handleToast()}
-              >
+            <a target=" _blank" href={Resume}>
+              <Button hasIcon="true" icon={<FiDownload />} type="primary">
                 Resume
               </Button>
             </a>
@@ -179,7 +174,6 @@ export const HomeScreen = () => {
           by Jeet
         </p>
       </footer>
- 
     </>
   );
 };
