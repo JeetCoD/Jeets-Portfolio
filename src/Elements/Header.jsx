@@ -11,7 +11,7 @@ import { Tooltip } from "react-tooltip";
 
 function Header() {
   return (
-    <div className="flex justify-between py-4 z-10 fixed backdrop-blur-sm px-4 border border-gray-600/50 items-center w-[80%] mx-auto self-center rounded-full mt-4">
+    <div className="flex justify-between py-4 z-10 fixed backdrop-blur-sm px-4 border border-gray-600/50 items-center w-full sm:w-[80%] mx-auto self-center mt-0 sm:mt-4 sm:rounded-full">
       <div>
         <p className="text-2xl font-semibold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
           JeetCoD
