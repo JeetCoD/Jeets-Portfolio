@@ -40,7 +40,7 @@ export default function AnimatedTag() {
       <div className="container">
         <div className="text-wrapper m-2.5">
           <p className="text-2 text-white-50 text-center animate-me">
-            Frontend Developer
+            Full stack Developer
           </p>
           <p className="text-2 text-white-50 text-center animate-me">
             UI Designer
@@ -50,9 +50,6 @@ export default function AnimatedTag() {
           </p>
           <p className="text-2 text-white-50 text-center animate-me">
             Programmer
-          </p>
-          <p className="text-2 text-white-50 text-center animate-me">
-            Web developer
           </p>
         </div>
       </div>

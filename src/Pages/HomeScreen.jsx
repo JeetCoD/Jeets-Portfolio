@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import Resume from "../data/Jeet-resume.pdf";
 import { toast } from "react-hot-toast";
-
+import FinoveraLogo from "../Images/finovera.png";
 
 const COLORS_TOP = ["rgba(229, 229, 229, 0.4)"];
 
@@ -50,9 +50,9 @@ export const HomeScreen = () => {
     Aos.init({ duration: 2000 });
   }, []);
 
-  function handleToast(){
+  function handleToast() {
     toast("Resume download is currently unavailable");
-    console.log("I'm working too")
+    console.log("I'm working too");
   }
 
   return (
@@ -73,7 +73,7 @@ export const HomeScreen = () => {
               Jeet Gajjar
             </h1>
 
-            <p className="my-6 max-w-xl text-center leading-relaxed md:text-lg md:leading-relaxed text-md">
+            <p className="my-4 max-w-xl text-center leading-relaxed md:text-lg md:leading-relaxed text-md">
               I&apos;m a dynamic web developer and UI/UX designer. Currently
               pursuing Computer Science Engineering. Helping brands to bring
               their products to life.
@@ -84,7 +84,15 @@ export const HomeScreen = () => {
               <Stars radius={50} count={2500} factor={4} fade speed={2} />
             </Canvas>
           </div>
-          <div className="flex  justify-center gap-3 pt-7 z-0">
+          <div className="flex justify-center z-0 md:text-md md:leading-relaxed text-sm">
+            <div className=" justify-center flex my-6 gap-2 items-center backdrop-blur-lg w-fit py-1 px-4 rounded-full bg-gray-50/5 border-t border-gray-50/10 hover:scale-105 transition-all ease-linear">
+              <img className="w-5 h-5" src={FinoveraLogo} alt="finovera logo" />
+              <a href="https://finovera.cloud" target=" _blank">
+                Currently building Finovera
+              </a>
+            </div>
+          </div>
+          <div className="flex justify-center gap-3 pt-7 z-0">
             <a target=" _blank" href={Resume}>
               <Button hasIcon="true" icon={<FiDownload />} type="primary">
                 Resume
