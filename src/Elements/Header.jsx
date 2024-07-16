@@ -26,7 +26,7 @@ function Header() {
           data-tooltip-content="GitHub"
         >
           <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiGithub className="text-md md:text-lg" />
+            <FiGithub className="text-sm md:text-lg" />
           </div>
         </Link>
         <Link
@@ -35,7 +35,7 @@ function Header() {
           data-tooltip-content="Blog"
         >
           <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiBook className="text-md md:text-lg" />
+            <FiBook className="text-sm md:text-lg" />
           </div>
         </Link>
         <Link
@@ -46,7 +46,7 @@ function Header() {
           data-tooltip-content="LinkedIn"
         >
           <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiLinkedin className="text-md md:text-lg" />
+            <FiLinkedin className="text-sm md:text-lg" />
           </div>
         </Link>
         <Link
@@ -57,7 +57,7 @@ function Header() {
           data-tooltip-content="Dribbble"
         >
           <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiDribbble className="text-md md:text-lg " />
+            <FiDribbble className="text-sm md:text-lg " />
           </div>
         </Link>
 
@@ -67,7 +67,7 @@ function Header() {
           data-tooltip-content="Email"
         >
           <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiMail className="text-md md:text-lg" />
+            <FiMail className="text-sm md:text-lg" />
           </div>
         </a>
       </div>
