@@ -7,6 +7,30 @@ import fastpizza from "../Images/fastpizza.png";
 
 export const project = [
   {
+    year: 2024,
+    projectName: "Finovera",
+    madeAt: "SAAS Application",
+    builtWith: [
+      "React",
+      "React Query",
+      "Supabase",
+      "Tailwind CSS",
+      "React Router",
+    ],
+
+    webLink: "https://finovera.cloud",
+    subtitle:
+      "A one stop solution for tracking all your stock financial gains. With integrated analytics, easy portfolio navigation, it is all you need to manage and track your stock portfolio.  ",
+  },
+  {
+    year: 2024,
+    projectName: "Jeet's Portfolio",
+    madeAt: "Portfolio site",
+    builtWith: ["React", "Tailwind CSS", "React Router", "JavaScript"],
+    githubLink: "https://github.com/JeetCoD/Jeets-Portfolio",
+    webLink: "https://jeetgajjar.com",
+  },
+  {
     image: wildOasis,
     year: 2024,
     projectName: "Wild Oasis",
