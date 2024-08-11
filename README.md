@@ -52,10 +52,6 @@ This portfolio is designed to look great on all devices, from desktop to mobile!
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/JeetCoD/Jeets-Portfolio/issues).
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 🌟 Show Your Support
 
 If you like this project, please give it a star! It's free and helps me a lot.
@@ -70,5 +66,3 @@ If you have any questions or would like to connect, feel free to reach out:
 ---
 
 Feel free to clone this repository and make it your own! Just remember to update the content with your personal information and projects. Happy coding! 🚀
-
-Would you like me to explain or break down any part of this updated README?
