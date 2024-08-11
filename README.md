@@ -1,6 +1,4 @@
-Here's a README file for your GitHub portfolio site:
-
-# My Portfolio Website
+# Jeet's Portfolio Website
 
 A sleek, modern, and responsive portfolio website showcasing my projects and skills.
 
@@ -14,7 +12,7 @@ A sleek, modern, and responsive portfolio website showcasing my projects and ski
 
 ## 🚀 Live Demo
 
-Check out the live version of the portfolio [here](https://your-portfolio-url.com).
+Check out the live version of the portfolio [here](https://jeetgajjar.com).
 
 ## 🛠️ Technologies Used
 
@@ -30,12 +28,12 @@ This portfolio is designed to look great on all devices, from desktop to mobile!
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/JeetCoD/Jeets-Portfolio.git
    ```
 
 2. Navigate to the project directory:
    ```
-   cd your-repo-name
+   cd Jeets-Portfolio
    ```
 
 3. Install dependencies:
@@ -52,7 +50,7 @@ This portfolio is designed to look great on all devices, from desktop to mobile!
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/your-repo-name/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/JeetCoD/Jeets-Portfolio/issues).
 
 ## 📄 License
 
@@ -66,12 +64,11 @@ If you like this project, please give it a star! It's free and helps me a lot.
 
 If you have any questions or would like to connect, feel free to reach out:
 
-- Email: your.email@example.com
-- LinkedIn: [Your Name](https://www.linkedin.com/in/yourprofile)
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- Email: jeetgajjar740@gmail.com
+- Twitter: [@jeet_wd](https://twitter.com/jeet_wd)
 
 ---
 
 Feel free to clone this repository and make it your own! Just remember to update the content with your personal information and projects. Happy coding! 🚀
 
-Would you like me to explain or break down any part of this README?
+Would you like me to explain or break down any part of this updated README?
