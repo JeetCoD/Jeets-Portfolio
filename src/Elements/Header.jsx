@@ -1,87 +1,134 @@
-import React from "react";
-import {
-  FiBook,
-  FiDribbble,
-  FiGithub,
-  FiLinkedin,
-  FiMail,
-} from "react-icons/fi";
+import React, { useState, useEffect } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { Tooltip } from "react-tooltip";
 
-function Header() {
-  return (
-    <div className="flex justify-between py-4 z-10 fixed backdrop-blur-sm px-4 border border-gray-600/50 items-center w-full sm:w-[80%] mx-auto self-center mt-0 sm:mt-4 sm:rounded-full">
-      <div>
-        <p className="text-2xl font-semibold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
-          JeetCoD
-        </p>
-      </div>
-      <div className="flex flex-row gap-2">
-        <Link
-          to="https://github.com/JeetCoD"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="GitHub"
-        >
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiGithub className="text-sm md:text-lg" />
-          </div>
-        </Link>
-        <Link
-          to="/blog"
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="Blog"
-        >
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiBook className="text-sm md:text-lg" />
-          </div>
-        </Link>
-        <Link
-          to="https://www.linkedin.com/in/jeet-gajjar-885bb4266/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="LinkedIn"
-        >
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiLinkedin className="text-sm md:text-lg" />
-          </div>
-        </Link>
-        <Link
-          to="https://dribbble.com/design_jeet"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="Dribbble"
-        >
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiDribbble className="text-sm md:text-lg " />
-          </div>
-        </Link>
+const HeaderLabels = [
+  { headerName: "projects" },
+  { headerName: "github", to: "https://github.com/JeetCoD" },
+  { headerName: "about" },
+  { headerName: "blogs", to: "/blog" },
+];
 
-        <a
-          href="mailto:jeet.gajjar2612@gmail.com"
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="Email"
-        >
-          <div className="flex p-2 bg-sky-800/10 hover:bg-sky-800/30 rounded-md border-solid border border-cyan-600/50 cursor-pointer text-cyan-800 hover:text-cyan-600 hover:border-cyan-600 transition-all ease-in">
-            <FiMail className="text-sm md:text-lg" />
-          </div>
-        </a>
-      </div>
-
-      <Tooltip
-        id="my-tooltip"
-        style={{
-          backgroundColor: "#0f172a",
-          borderRadius: "8px",
-          padding: "8px",
-        }}
-      />
-    </div>
-  );
+function handleScroll({ data }) {
+  const section = document.getElementById(data.headerName);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
-export default Header;
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
+  return (
+    <header className="fixed top-0 left-0 w-full z-50">
+      <div className="flex justify-between items-center py-2 px-4 backdrop-blur-sm mt-2 sm:mt-4 bg-gray-200/5 border-t w-[98%] sm:w-[90%] mx-auto sm:rounded-full rounded-lg transition-all duration-300 ease-in-out relative z-50 h-14 sm:h-auto border-b sm:border-0 border-gray-600/30">
+        <div>
+          <p className="text-xl font-semibold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
+            JeetCoD
+          </p>
+        </div>
+
+        {isMobile ? (
+          <div className="flex items-center gap-4">
+            <Link className="text-gray-900 bg-white text-sm font-medium hover:font-semibold py-1 px-2 rounded-md tracking-tight hover:bg-gray-50 transition-all ease-linear duration-150">
+              Let&apos;s Talk
+            </Link>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-400 hover:text-white transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
+        ) : (
+          <>
+            <nav className="hidden sm:flex gap-4">
+              {HeaderLabels.map((data) => (
+                <Link
+                  key={data.headerName}
+                  className="text-gray-400 text-sm font-semibold hover:text-gray-200 transition-all ease-linear duration-200 cursor-pointer py-1 hover:bg-gray-600/20 rounded-md px-2 capitalize"
+                  onClick={() => handleScroll({ data })}
+                  to={data.to}
+                  target={data.to ? "_blank" : undefined}
+                >
+                  <span>{data.headerName}</span>
+                </Link>
+              ))}
+            </nav>
+            <Link className="hidden sm:block text-gray-900 bg-white text-sm font-medium hover:font-semibold py-1 px-2 rounded-md tracking-tight hover:bg-gray-50 transition-all ease-linear duration-150" to="https://work.jeetgajjar.com">
+              Let&apos;s Talk
+            </Link>
+          </>
+        )}
+      </div>
+
+      {/* Mobile menu */}
+      {isMobile && (
+        <>
+          <div
+            className={`fixed inset-0 bg-black transition-opacity duration-300 ease-in-out ${
+              isMenuOpen ? "opacity-50" : "opacity-0 pointer-events-none"
+            }`}
+          />
+          <div
+            className={`fixed top-14 left-[1%] right-[1%] bg-gray-800/95 backdrop-blur-sm w-[98%] mx-auto transition-all duration-300 ease-in-out rounded-lg overflow-hidden ${
+              isMenuOpen
+                ? "opacity-100 visible border border-gray-600/30"
+                : "opacity-0 invisible pointer-events-none"
+            }`}
+            style={{
+              height: isMenuOpen ? "calc(98% - 3.5rem)" : "0",
+              maxHeight: "calc(100vh - 3.5rem)",
+            }}
+          >
+            <nav className="flex flex-col items-center justify-center h-full py-4">
+              {HeaderLabels.map((data) => (
+                <Link
+                  key={data.headerName}
+                  className="text-gray-200 text-lg font-semibold hover:text-white transition-all ease-linear duration-200 cursor-pointer py-2 px-4 rounded-md capitalize"
+                  onClick={() => {
+                    handleScroll({ data });
+                    setIsMenuOpen(false);
+                  }}
+                  to={data.to}
+                  target={data.to ? "_blank" : undefined}
+                >
+                  <span>{data.headerName}</span>
+                </Link>
+              ))}
+              <Link
+                className="mt-4 text-gray-900 bg-white text-sm font-medium hover:font-semibold py-2 px-4 rounded-md tracking-tight hover:bg-gray-50 transition-all ease-linear duration-150"
+                to="https://work.jeetgajjar.com"
+              >
+                Let&apos;s Talk
+              </Link>
+            </nav>
+          </div>
+        </>
+      )}
+
+    </header>
+  );
+}

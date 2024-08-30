@@ -18,6 +18,7 @@ import { HiOutlineArrowSmRight } from "react-icons/hi";
 import Resume from "../data/Jeet-resume.pdf";
 import { toast } from "react-hot-toast";
 import FinoveraLogo from "../Images/finovera.png";
+import Socials from "../Elements/Socials";
 
 const COLORS_TOP = ["rgba(229, 229, 229, 0.4)"];
 
@@ -104,13 +105,13 @@ export const HomeScreen = () => {
               type="primary"
               onClick={() => scrollToSection("projects")}
             >
-              Project
+              Projects
             </Button>
           </div>
         </motion.section>
       </div>
 
-      <ContentContainer>
+      <ContentContainer name="about">
         <SectionHeader id={1}>About me</SectionHeader>
         <div className="mt-12 flex flex-col gap-4 text-gray-400 leading-relaxed sm:leading-relaxed text-md">
           <p className="">
@@ -142,6 +143,15 @@ export const HomeScreen = () => {
       <ContentContainer>
         <SectionHeader id={2}>Work experience</SectionHeader>
         <ExperienceCard />
+        <a
+          to="/projects"
+          className="mt-4 text-cyan-500 inline-flex font-medium items-center gap-1 group hover:underline hover:underline-offset-4 text-sm md:text-base transition-all ease-in cursor-pointer"
+        >
+          View Full Resume{" "}
+          <span className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 -rotate-45 transition-all ease-in duration-100">
+            <HiOutlineArrowSmRight className="text-xl md:text-2xl " />
+          </span>
+        </a>
       </ContentContainer>
       <ContentContainer name="projects">
         <SectionHeader id={3}>Project showcase</SectionHeader>
@@ -151,8 +161,8 @@ export const HomeScreen = () => {
           className="mt-4 text-cyan-500 inline-flex font-medium items-center gap-1 group hover:underline hover:underline-offset-4 text-sm md:text-base transition-all ease-in"
         >
           View All Projects{" "}
-          <span className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 -rotate-45 transition-all ease-in">
-            <HiOutlineArrowSmRight className="text-xl" />
+          <span className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 -rotate-45 transition-all ease-in duration-100">
+            <HiOutlineArrowSmRight className="text-xl md:text-2xl " />
           </span>
         </Link>
       </ContentContainer>
@@ -164,9 +174,10 @@ export const HomeScreen = () => {
           free to reach out. I&apos;m always open to new opportunities and
           conversations.
         </p>
-        <a href="mailto:jeetgajjar740@gmail.com" className="flex mt-4 mb-36">
+        <a href="mailto:jeetgajjar740@gmail.com" className="flex mt-4 mb-8">
           <Button type="secondary">Send a Message</Button>
         </a>
+        <Socials/>
       </ContentContainer>
       <footer className="flex flex-col justify-center items-center py-8  border-t border-gray-600 bg-gray-950">
         <p className="text-center text-xs leading-5 w-[70%] sm:text-sm text-gray-600 pb-2">
