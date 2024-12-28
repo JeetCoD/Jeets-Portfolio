@@ -1,17 +1,16 @@
-import AOS from 'aos';
-import { useEffect } from 'react';
-
+import AOS from "aos";
+import { useEffect } from "react";
 
 function SectionHeader({ children, margin, id }) {
-  useEffect(()=> {
-    AOS.init({duration:1000})
-  })
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  });
   return (
-    <div  className={`flex gap-3 items-end  ${margin} `} >
-      <span className="font-medium text-lg sm:text-2xl  text-cyan-600  uppercase">
+    <div className={`flex gap-3 items-end  ${margin} `}>
+      <span className="font-bold text-lg sm:text-2xl  text-gray-900  uppercase">
         0{id}.
       </span>
-      <p className="font-bold  text-lg sm:text-2xl  text-gray-200  ">
+      <p className="font-semibold  text-lg sm:text-2xl  text-gray-500  ">
         {children}
       </p>
     </div>

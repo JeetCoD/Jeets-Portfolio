@@ -18,13 +18,11 @@ function ContentContainer({ children, type, size, name }) {
   return (
     <section
       id={name}
-      className={`bg-gray-950 ${height[size]} px-8 mt-32 md:px-32 sm:px-18`}
+      className={`bg-slate-50 ${height[size]} px-8 mt-32 md:px-32 sm:px-18`}
       data-aos="fade"
       data-aos-once="true"
     >
       {children}
-
-     
     </section>
   );
 }

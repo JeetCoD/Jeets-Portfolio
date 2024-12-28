@@ -10,7 +10,7 @@
 }
 
 html {
-  background-color: #030712;
+  background-color: #f8fafc;
 }
 
 @layer utilities {
@@ -19,19 +19,18 @@ html {
     @apply relative bg-gradient-to-tr from-slate-900 to-gray-900 overflow-hidden;
   }
 
- .card-wrapper::before {
- background: conic-gradient(
+  .card-wrapper::before {
+    background: conic-gradient(
       rgb(224, 224, 224) 20deg,
       rgba(111, 111, 111, 0.4) 20deg,
       transparent 20deg
     );
-   @apply absolute left-[-45%] top-[-100%] h-[300%] w-[200%] animate-border-spin content-[''] ;
-}
-
-
-  .card-content {
-   @apply  left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] bg-gradient-to-b from-slate-800 to-slate-900;
+    @apply absolute left-[-45%] top-[-100%] h-[300%] w-[200%] animate-border-spin content-[''];
   }
 
+  .card-content {
+    @apply left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] bg-gradient-to-b from-slate-800 to-slate-900;
+  }
 
+ 
 }

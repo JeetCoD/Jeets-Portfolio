@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 const HeaderLabels = [
   { headerName: "projects" },
@@ -42,21 +43,21 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-      <div className="flex justify-between items-center py-2 px-4 backdrop-blur-sm mt-2 sm:mt-4 bg-gray-200/5 border-t w-[98%] sm:w-[90%] mx-auto sm:rounded-full rounded-lg transition-all duration-300 ease-in-out relative z-50 h-14 sm:h-auto border-b sm:border-0 border-gray-600/30">
+      <div className="flex justify-between items-center py-2 px-4 backdrop-blur-sm mt-2 sm:mt-4 border bg-white/50  w-[98%] sm:w-[90%] mx-auto sm:rounded-xl rounded-xl transition-all duration-300 ease-in-out relative z-50 h-14 sm:h-auto shadow-sm ">
         <div>
-          <p className="text-xl font-semibold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
+          <p className="text-xl font-semibold bg-gradient-to-br from-slate-900 to-gray-700 bg-clip-text text-transparent">
             JeetCoD
           </p>
         </div>
 
         {isMobile ? (
           <div className="flex items-center gap-4">
-            <Link className="text-gray-900 bg-white text-sm font-medium hover:font-semibold py-1 px-2 rounded-md tracking-tight hover:bg-gray-50 transition-all ease-linear duration-150">
+            <Link className="text-slate-100 bg-slate-800 text-sm font-medium hover:font-semibold py-1 px-2 rounded-md tracking-tight hover:bg-gray-950 transition-all ease-linear duration-150">
               Let&apos;s Talk
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-slate-400 hover:text-slate-600 transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -68,7 +69,7 @@ export default function Header() {
               {HeaderLabels.map((data) => (
                 <Link
                   key={data.headerName}
-                  className="text-gray-400 text-sm font-semibold hover:text-gray-200 transition-all ease-linear duration-200 cursor-pointer py-1 hover:bg-gray-600/20 rounded-md px-2 capitalize"
+                  className="text-slate-600 text-sm font-semibold hover:text-slate-50 transition-all ease-linear duration-200 cursor-pointer py-1 hover:bg-slate-800 rounded-md px-2 capitalize"
                   onClick={() => handleScroll({ data })}
                   to={data.to}
                   target={data.to ? "_blank" : undefined}
@@ -77,7 +78,7 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <Link className="hidden sm:block text-gray-900 bg-white text-sm font-medium hover:font-semibold py-1 px-2 rounded-md tracking-tight hover:bg-gray-50 transition-all ease-linear duration-150" to="https://work.jeetgajjar.com">
+            <Link className="text-slate-100 bg-slate-800 text-sm font-medium hover:font-semibold py-1 px-2 rounded-lg tracking-tight hover:bg-gray-950 transition-all ease-linear duration-150">
               Let&apos;s Talk
             </Link>
           </>
@@ -88,26 +89,25 @@ export default function Header() {
       {isMobile && (
         <>
           <div
-            className={`fixed inset-0 bg-black transition-opacity duration-300 ease-in-out ${
+            className={`fixed inset-0 bg-slate transition-opacity duration-300 ease-in-out ${
               isMenuOpen ? "opacity-50" : "opacity-0 pointer-events-none"
             }`}
           />
           <div
-            className={`fixed top-14 left-[1%] right-[1%] bg-gray-800/95 backdrop-blur-sm w-[98%] mx-auto transition-all duration-300 ease-in-out rounded-lg overflow-hidden ${
+            className={`fixed top-0 left-0 right-0 bg-slate-100/95 backdrop-blur-sm w-full mx-auto transition-all duration-300 ease-in-out overflow-hidden ${
               isMenuOpen
-                ? "opacity-100 visible border border-gray-600/30"
+                ? "opacity-100 visible border-b border-gray-600/30"
                 : "opacity-0 invisible pointer-events-none"
             }`}
             style={{
-              height: isMenuOpen ? "calc(98% - 3.5rem)" : "0",
-              maxHeight: "calc(100vh - 3.5rem)",
+              height: isMenuOpen ? "100vh" : "0",
             }}
           >
             <nav className="flex flex-col items-center justify-center h-full py-4">
               {HeaderLabels.map((data) => (
                 <Link
                   key={data.headerName}
-                  className="text-gray-200 text-lg font-semibold hover:text-white transition-all ease-linear duration-200 cursor-pointer py-2 px-4 rounded-md capitalize"
+                  className="text-gray-500 text-lg font-medium hover:text-gray-800 transition-all ease-linear duration-200 cursor-pointer py-2 px-4 rounded-md capitalize"
                   onClick={() => {
                     handleScroll({ data });
                     setIsMenuOpen(false);
@@ -119,8 +119,8 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                className="mt-4 text-gray-900 bg-white text-sm font-medium hover:font-semibold py-2 px-4 rounded-md tracking-tight hover:bg-gray-50 transition-all ease-linear duration-150"
-                to="https://work.jeetgajjar.com"
+                className="text-slate-100 bg-slate-800 text-md font-medium hover:font-semibold p-2 rounded-xl tracking-tight hover:bg-gray-950 transition-all ease-linear duration-150 w-[50%] text-center "
+                onClick={() => setIsMenuOpen(false)}
               >
                 Let&apos;s Talk
               </Link>
@@ -129,6 +129,14 @@ export default function Header() {
         </>
       )}
 
+      <Tooltip
+        id="my-tooltip"
+        style={{
+          backgroundColor: "#0f172a",
+          borderRadius: "8px",
+          padding: "8px",
+        }}
+      />
     </header>
   );
 }

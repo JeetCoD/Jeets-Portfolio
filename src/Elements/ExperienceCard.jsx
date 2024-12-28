@@ -45,7 +45,7 @@ function ExperienceCard() {
         <div
           data-aos="fade"
           data-aos-once="true"
-          className="flex flex-col lg:flex-row border-t border-transparent lg:hover:border-t lg:hover:border-sky-800/15 lg:hover:bg-sky-800/10 lg:hover:shadow-sm lg:hover:shadow-sky-600/10 rounded-md transition-all ease-linear gap-4 py-4 lg:p-4 cursor-pointer"
+          className="flex flex-col lg:flex-row border-t border-transparent lg:hover:border-t lg:hover:border-slate-300/15 lg:hover:bg-slate-100 lg:hover:shadow-sm lg:hover:shadow-slate-200/10 rounded-md transition-all ease-linear gap-4 py-4 lg:p-4 cursor-pointer"
           key={experience.company}
         >
           <div
@@ -57,7 +57,7 @@ function ExperienceCard() {
           <div className="md:leading-none">
             <div className="flex flex-col gap-4">
               <p
-                className={`text-gray-100 font-medium text-md transition-all ease-in lg:hover:text-cyan-500 lg:hover:underline-offset-4 lg:hover:underline cursor-pointer`}
+                className={`text-gray-800 font-medium text-md transition-all ease-in lg:hover:text-gray-900 lg:hover:underline-offset-4 lg:hover:underline cursor-pointer`}
               >
                 <a href={experience.link} target="_blank" rel="noreferrer">
                   {experience.company}
@@ -66,13 +66,13 @@ function ExperienceCard() {
                 </a>
               </p>
               <p
-                className={`font-medium text-gray-400 flex shrink-0 min-w-52 gap-1 ${baseClass} leading-relaxed`}
+                className={` text-gray-600 flex shrink-0 min-w-52 gap-1 ${baseClass} leading-relaxed`}
               >
                 {experience.responsibility}
               </p>
               <div className="flex gap-2 flex-wrap">
                 {experience.tags.map((label) => (
-                  <Tag tag={label} key={label} size="text-sm" />
+                  <Tag tag={label} key={label} size="text-xs" />
                 ))}
               </div>
             </div>
@@ -86,7 +86,7 @@ function ExperienceCard() {
 export function Tag({ tag, size }) {
   return (
     <span
-      className={`flex ${size} bg-cyan-300/10 px-3 py-1 rounded-full text-cyan-500`}
+      className={`flex ${size} bg-slate-900 px-3 py-1 rounded-xl text-slate-100 font-medium`}
     >
       {tag}
     </span>
